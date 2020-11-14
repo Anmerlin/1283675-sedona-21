@@ -22,17 +22,17 @@
         <button class="main-navigation__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
-        <ul class="menu-navigation__list">
-          <li class="menu-navigation__item">
+        <ul class="main-navigation__list">
+          <li class="main-navigation__item">
             <a href="index.html">Главная</a>
           </li>
-          <li class="menu-navigation__item">
+          <li class="main-navigation__item">
             <a href="gallery.html">Фото и видео</a>
           </li>
-          <li class="menu-navigation__item">
+          <li class="main-navigation__item">
             <a href="review.html">Форма отзыва</a>
           </li>
-          <li class="menu-navigation__item">
+          <li class="main-navigation__item">
             <a href="https://htmlacademy.ru/">HTML Academy</a>
           </li>
         </ul>
@@ -53,94 +53,86 @@
     <!-- Блок "Интро" описание всей страницы-->
     <section class="intro intro--main">
       <h1 class="intro__title">Седона — небольшой городок в Аризоне, заслуживающий большего!</h1>
-        <p class="intro__desc">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
+      <p class="intro__desc">Рассмотрим 5 причин, по которым Седона круче, чем гранд каньон!</p>
     </section>
 
     <!-- Блок "Преимущества" комплексный блок - одна тематика, но разная стилизация-->
-    <section class="avantages">
+    <section class="advantages">
       <h2 class="visually-hidden">Преимущества</h2>
 
-      <figure class="avantages__item">
-        <figcaption class="avantages__item-info avantages__item-info--bgcolor">
-          <h3 class="avantages__item-title">Настоящий городок</h3>
-          <p>- №1 -</p>
-          <p>Седона не аттракцион для туристов, там течет своя жизнь</p>
-        </figcaption>
-        <picture class="avantages__item-picture">
-          <source media="(min-width: 1200px)" srcset="https://via.placeholder.com/800x256">
-          <source media="(min-width: 768px)" srcset="https://via.placeholder.com/512x256">
-          <img src="https://via.placeholder.com/320x260" alt="Фото городка">
-        </picture>
-      </figure>
-
-      <div class="avantages__item-wrapper avantages__item-wrapper--features">
-        <figure class="avantages__item avantages__item--housing">
-          <figcaption class="avantages__item-info">
+      <ul class="advantages__list">
+        <li class="advantages__item advantages__item--wide">
+          <div class="advantages__item-info advantages__item-info--bgcolor">
+            <h3 class="advantages__item-title">Настоящий городок</h3>
+            <p>- №1 -</p>
+            <p>Седона не аттракцион для туристов, там течет своя жизнь</p>
+          </div>
+          <picture class="advantages__item-picture">
+            <source media="(min-width: 1200px)" srcset="https://via.placeholder.com/800x256">
+            <source media="(min-width: 768px)" srcset="https://via.placeholder.com/512x256">
+            <img src="https://via.placeholder.com/320x260" alt="Фото городка">
+          </picture>
+        </li>
+        <li class="advantages__item avantages__item--housing">
+          <div class="avantages__item-info">
             <h3 class="avantages__item-title">Жилье</h3>
             <p>Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
-          </figcaption>
-        </figure>
-
-        <figure class="avantages__item avantages__item--souvenirs">
-          <figcaption class="avantages__item-info">
+          </div>
+        </li>
+        <li class="advantages__item avantages__item--souvenirs">
+          <div class="avantages__item-info">
             <h3 class="avantages__item-title">Сувениры</h3>
             <p>Не только китайского, но и местного производства!</p>
-          </figcaption>
-        </figure>
-
-        <figure class="avantages__item avantages__item--food">
-          <figcaption class="avantages__item-info">
+          </div>
+        </li>
+        <li class="advantages__item avantages__item--food">
+          <div class="avantages__item-info">
             <h3 class="avantages__item-title">Еда</h3>
             <p>Всегда заказывайте Фирменный Бургер, Вы не разочаруетесь!</p>
-          </figcaption>
-        </figure>
-      </div>
-
-      <figure class="avantages__item">
-        <figcaption class="avantages__item-info avantages__item-info--bgcolor">
-          <h3 class="avantages__item-title">ТАМ ЕСТЬ Мост дьявола</h3>
-          <p>- №2 -</p>
-          <p>Седона не аттракцион для туристов, там течет своя жизнь</p>
-        </figcaption>
-        <picture class="avantages__item-picture avantages__item-picture--invert">
-          <source media="(min-width: 1200px)" srcset="https://via.placeholder.com/800x256">
-          <source media="(min-width: 768px)" srcset="https://via.placeholder.com/512x256">
-          <img src="https://via.placeholder.com/320x260" alt="Фото городка">
-        </picture>
-      </figure>
-
-      <div class="avantages__item-wrapper">
-        <figure class="avantages__item">
-          <figcaption class="avantages__item-info">
+          </div>
+        </li>
+        <li class="advantages__item advantages__item--wide">
+          <div class="avantages__item-info avantages__item-info--bgcolor">
+            <h3 class="avantages__item-title">ТАМ ЕСТЬ Мост дьявола</h3>
+            <p>- №2 -</p>
+            <p>Седона не аттракцион для туристов, там течет своя жизнь</p>
+          </div>
+          <picture class="avantages__item-picture avantages__item-picture--invert">
+            <source media="(min-width: 1200px)" srcset="https://via.placeholder.com/800x256">
+            <source media="(min-width: 768px)" srcset="https://via.placeholder.com/512x256">
+            <img src="https://via.placeholder.com/320x260" alt="Фото городка">
+          </picture>
+        </li>
+        <li class="advantages__item">
+          <div class="avantages__item-info">
             <h3 class="avantages__item-title">Небольшая площадь</h3>
             <p>- №3 -</p>
             <p>Все интересные места находятся очень близко</p>
-          </figcaption>
-        </figure>
-
-        <figure class="avantages__item avantages__item--souvenirs">
-          <figcaption class="avantages__item-info">
+          </div>
+        </li>
+        <li class="advantages__item">
+          <div class="avantages__item-info">
             <h3 class="avantages__item-title">Красивая дорога</h3>
             <p>- №4 -</p>
             <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
-          </figcaption>
-        </figure>
-
-        <figure class="avantages__item avantages__item--food">
-          <figcaption class="avantages__item-info">
+          </div>
+        </li>
+        <li class="advantages__item">
+          <div class="avantages__item-info">
             <h3 class="avantages__item-title">Мало туристов</h3>
             <p>- №5 -</p>
             <p>Большинство едет в гранд каньон и толпится там</p>
-          </figcaption>
-        </figure>
-      </div>
+          </div>
+        </li>
+      </ul>
 
     </section>
 
     <!-- Блок "Мотивация"-->
     <section class="motivation">
+      <h2 class="visually-hidden">Возможность найти лучшие предложения гостиниц</h2>
       <h2 class="motivation__title">Заинтересовались?</h2>
-      <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в седоне</p>
+      <p>Укажите предполагаемые даты поездки, и мы покажем вам лучшие предложения гостиниц в Седоне</p>
       <a class="motivation__button button" href="#">Найти гостиницу</a>
     </section>
 
@@ -160,14 +152,14 @@
     <div class="page-footer__hashtag">#visitsedona</div>
 
     <ul class="page-footer__social social-list">
-      <li class="social__item">
-        <a class="social__link social__link--twitter" href="#" aria-label="Мы в Твитере"></a>
+      <li class="social-list__item">
+        <a class="social-list__link social-list__link--twitter" href="#" aria-label="Мы в Твитере"></a>
       </li>
-      <li class="social__item">
-        <a class="social__link social__link--facebook" href="#" aria-label="Мы в Фейсбуке"></a>
+      <li class="social-list__item">
+        <a class="social-list__link social-list__link--facebook" href="#" aria-label="Мы в Фейсбуке"></a>
       </li>
-      <li class="social__item">
-        <a class="social__link social__link--youtube" href="#" aria-label="Мы в Ютубе"></a>
+      <li class="social-list__item">
+        <a class="social-list__link social-list__link--youtube" href="#" aria-label="Мы в Ютубе"></a>
       </li>
     </ul>
 
