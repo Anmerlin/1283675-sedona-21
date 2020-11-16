@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML Academy: Седона - Фото и видео</title>
+</head>
+
+<body class="page__body">
+
+  <!-- Блок "Заголовка" комплексный блок - навигация и лого с бэкграундом-->
+  <header class="page-header">
+
+    <div class="page-header__wrapper">
+      <a class="page-header__logo">
+        <img class="page-header__logo-image" src="https://via.placeholder.com/102x84" width="102" height="84"
+          alt="Логотип города Седона">
+      </a>
+      <!-- Блок "Навигации" описание всей страницы-->
+      <nav class="main-navigation">
+        <button class="main-navigation__toggle" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
+        <ul class="main-navigation__list">
+          <li class="main-navigation__item">
+            <a href="index.html">Главная</a>
+          </li>
+          <li class="main-navigation__item">
+            <a href="gallery.html">Фото и видео</a>
+          </li>
+          <li class="main-navigation__item">
+            <a href="review.html">Форма отзыва</a>
+          </li>
+          <li class="main-navigation__item">
+            <a href="https://htmlacademy.ru/">HTML Academy</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="page-header__intro">
+      <picture>
+        <source media="(min-width: 768px)" srcset="https://via.placeholder.com/460x80">
+        <source media="(min-width: 768px)" srcset="https://via.placeholder.com/457x78">
+        <img src="https://via.placeholder.com/229x39" alt="Добро пожаловать в Седону">
+      </picture>
+    </div>
+
+  </header>
+
+  <main class="page-main">
+
+    <!-- Блок "Интро" описание всей страницы-->
+    <section class="intro intro--main">
+      <h1 class="intro__title">Фото и видео</h1>
+      <p class="intro__desc">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и
+        экономике.</p>
+    </section>
+
+    <section class="photo">
+      <h2 class="visually-hidden">Фото</h2>
+      <figure class="photo__card photo__card--wide">
+        <picture class="photo__card-picture">
+          <source media="(min-width: 1200px)" srcset="https://via.placeholder.com/1200x400">
+          <source media="(min-width: 768px)" srcset="https://via.placeholder.com/648x400">
+          <img src="https://via.placeholder.com/280x280" alt="Неродные просторы">
+        </picture>
+        <figcaption class="photo__card-info">
+          <div class="photo__card-wrapper">
+            <h3 class="photo__card-title">Неродные просторы</h3>
+            <p>Автор фото: Борис</p>
+          </div>
+          <span class="photo__card-like">1350</span>
+        </figcaption>
+      </figure>
+
+      <figure class="photo__card">
+        <picture class="photo__card-picture">
+          <source media="(min-width: 1200px)" srcset="https://via.placeholder.com/400x267">
+          <source media="(min-width: 768px)" srcset="https://via.placeholder.com/324x267">
+          <img src="https://via.placeholder.com/280x280" alt="Местная растительность">
+        </picture>
+        <figcaption class="photo__card-info">
+          <div class="photo__card-wrapper">
+            <h3 class="photo__card-title">Местная растительность</h3>
+            <p>Автор фото: Сергей</p>
+          </div>
+          <span class="photo__card-like">143</span>
+        </figcaption>
+      </figure>
+
+      <figure class="photo__card">
+        <picture class="photo__card-picture">
+          <source media="(min-width: 1200px)" srcset="https://via.placeholder.com/400x267">
+          <source media="(min-width: 768px)" srcset="https://via.placeholder.com/324x267">
+          <img src="https://via.placeholder.com/280x280" alt="Дорога на север">
+        </picture>
+        <figcaption class="photo__card-info">
+          <div class="photo__card-wrapper">
+            <h3 class="photo__card-title">Дорога на север</h3>
+            <p>Автор фото: Петр</p>
+          </div>
+          <span class="photo__card-like">96</span>
+        </figcaption>
+      </figure>
+
+      <figure class="photo__card">
+        <picture class="photo__card-picture">
+          <source media="(min-width: 1200px)" srcset="https://via.placeholder.com/400x267">
+          <source media="(min-width: 768px)" srcset="https://via.placeholder.com/324x267">
+          <img src="https://via.placeholder.com/280x280" alt="Мост Дьявола">
+        </picture>
+        <figcaption class="photo__card-info">
+          <div class="photo__card-wrapper">
+            <h3 class="photo__card-title">Мост Дьявола</h3>
+            <p>Автор фото: Антон</p>
+          </div>
+          <span class="photo__card-like">254</span>
+        </figcaption>
+      </figure>
+
+    </section>
+
+    <section class="video">
+      <h2 class="visually-hidden">Видеопрезентация</h2>
+      <h2 class="video__title">Все еще сомневаетесь?</h2>
+      <p class="video__desc">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
+
+      <div class="video__wrapper">
+        <picture>
+          <source media="(min-width: 1200px)" srcset="https://via.placeholder.com/800x500">
+          <source media="(min-width: 768px)" srcset="https://via.placeholder.com/648x500">
+          <img src="https://via.placeholder.com/320x201" alt="Видеопрезентация">
+        </picture>
+        <div class="video__control control">
+          <button class="control__button control__button--replay" type="button"></button>
+          <div class="control__progressbar">
+            <span class="control__segment"></span>
+          </div>
+          <button class="control__button control__button--subtitles" type="button"></button>
+          <button class="control__button control__button--fullscreen" type="button"></button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="page-footer">
+    <div class="page-footer__hashtag">#visitsedona</div>
+
+    <ul class="page-footer__social social-list">
+      <li class="social-list__item">
+        <a class="social-list__link social-list__link--twitter" href="#" aria-label="Мы в Твитере"></a>
+      </li>
+      <li class="social-list__item">
+        <a class="social-list__link social-list__link--facebook" href="#" aria-label="Мы в Фейсбуке"></a>
+      </li>
+      <li class="social-list__item">
+        <a class="social-list__link social-list__link--youtube" href="#" aria-label="Мы в Ютубе"></a>
+      </li>
+    </ul>
+
+    <div class="page-footer__copyright copyright">
+      <span class="copyright__text">Разработано:</span>
+      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" aria-label="HTML Academy">
+        <img src="https://via.placeholder.com/27x34" alt="HTML Academy">
+      </a>
+    </div>
+  </footer>
+
+</body>
+
+</html>
