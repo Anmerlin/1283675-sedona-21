@@ -1,0 +1,20 @@
+.page {
+  height: 100%;
+}
+
+.page__body {
+  position: relative;
+  min-width: 320px;
+  height: 100%;
+
+  overflow-x: hidden;
+
+  font-family: $mainfont;
+  font-size: $fontsize;
+  line-height: $lineheight;
+  color: $textcolor;
+
+  text-transform: uppercase;
+
+  background-color: $white;
+}

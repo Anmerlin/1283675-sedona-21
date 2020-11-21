@@ -1,0 +1,33 @@
+.page-header__wrapper {
+  position: relative;
+  min-height: 84px;
+
+  overflow: hidden;
+}
+
+.page-header__logo {
+  position: absolute;
+  top: 0;
+  left: 50%;
+
+  transform: translateX(-50%);
+}
+
+.page-header__intro {
+  position: relative;
+
+  height: 389px;
+
+  background: $blue url("../img/photo-background.jpg") 50% 0 no-repeat;
+}
+
+.page-header__intro-slogan {
+  position: absolute;
+  top: 90px;
+  left: 50%;
+
+  max-width: 282px;
+  width: 100%;
+
+  transform: translateX(-50%);
+}

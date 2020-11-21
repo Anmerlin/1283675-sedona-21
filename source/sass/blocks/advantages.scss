@@ -1,0 +1,59 @@
+.advantages__list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.advantages__item {
+  padding: 25px 20px;
+  text-align: center;
+  background-color: $gray-second;
+
+  &--wide {
+    padding: 0;
+  }
+
+  &--housing,
+  &--souvenirs,
+  &--food {
+    text-align: left;
+
+    background-color: $white;
+  }
+
+  &--housing {
+    padding: 26px 20px 10px 21px;
+  }
+
+  &--souvenirs {
+    padding: 5px 20px 10px 21px;
+  }
+
+  &--food {
+    padding: 11px 20px 35px 21px;
+  }
+}
+
+.advantages__item-info {
+  padding: 34px 12px 39px 13px;
+
+  &--bgcolor {
+    color: $white;
+    background-color: $blue;
+  }
+
+  &--padding {
+    padding: 0 2px;
+  }
+
+  &--border {
+    border-bottom: 1px solid $darkgray-second;
+  }
+}
+
+.advantages__item-title {
+  margin: 0 0 20px;
+  font-size: 18px;
+  line-height: 26px;
+}

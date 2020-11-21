@@ -1,0 +1,22 @@
+.social-list {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.social-list__item {
+  margin: 0 3px;
+}
+
+.social-list__link {
+  display: block;
+  width: 46px;
+  height: 48px;
+
+  color: $white;
+
+  background-color: $blue;
+}
