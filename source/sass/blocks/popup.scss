@@ -1,0 +1,46 @@
+.popup {
+  width: 100%;
+  padding-top: 38px;
+
+  text-align: center;
+
+  background-color: $white;
+
+  &--failure {
+    padding: 40px 41px 35px;
+  }
+}
+
+.popup__title {
+  margin: 0 0 35px;
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.popup__desc {
+  padding: 0 37px;
+
+  line-height: 24px;
+
+  &--failure {
+    padding: 0;
+  }
+}
+
+.popup__wrapper {
+  margin-top: 50px;
+  padding: 20px;
+
+  background-color: $lightgray;
+}
+
+.popup__button-success {
+  width: 100%;
+}
+
+.popup__button-failure {
+  max-width: 180px;
+  width: 100%;
+
+  margin-top: 25px;
+}

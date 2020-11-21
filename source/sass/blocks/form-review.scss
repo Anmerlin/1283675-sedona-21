@@ -1,0 +1,161 @@
+.form-review {
+  margin-bottom: 48px;
+}
+
+.form-review__group {
+  padding: 20px 20px 5px;
+  margin: 0;
+
+  border: none;
+  border-top: 1px solid $gray;
+}
+
+.form-review__group-title {
+  display: block;
+  width: 100%;
+
+  padding: 0;
+  margin: 0;
+
+  float: left;
+
+  font-size: 18px;
+  line-height: 26px;
+  font-weight: bold;
+  color: $black;
+
+  text-align: center;
+  border: none;
+
+  &::after {
+    content: "";
+    display: table;
+    clear: left;
+  }
+
+  &--introduce {
+    margin-bottom: 19px;
+  }
+
+  &--contacts {
+    margin-bottom: 17px;
+  }
+
+  &--impression,
+  &--attractions {
+    margin-bottom: 25px;
+  }
+
+  &--emotion {
+    margin-bottom: 15px;
+  }
+}
+
+.form-review__group-label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 20px;
+
+  line-height: 26px;
+
+  &--phone,
+  &--email {
+    position: relative;
+    flex-wrap: wrap;
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: 0;
+
+      width: 58px;
+      height: 58px;
+
+      background-color: $gray-first;
+    }
+  }
+
+  &--radio,
+  &--checkbox {
+    justify-content: flex-start;
+
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: bold;
+    color: $black;
+    text-transform: none;
+  }
+}
+
+.form-review__group-name {
+  padding-left: 22px;
+}
+
+.form-review__group-text {
+  width: 100%;
+  height: 58px;
+
+  margin-left: 10px;
+  padding-left: 22px;
+
+  border: none;
+  background-color: $lightgray;
+
+  &::placeholder {
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: bold;
+    color: $black;
+  }
+
+  &--name {
+    max-width: 230px;
+  }
+
+  &--surname {
+    max-width: 192px;
+  }
+
+  &--patronymic {
+    max-width: 194px;
+  }
+
+  &[type="tel"],
+  &[type="email"] {
+    margin-top: 8px;
+    margin-left: 0;
+  }
+}
+
+.form-review__group-textarea {
+  height: 160px;
+  width: 100%;
+  padding: 13px 23px 29px 21px;
+
+  border: none;
+
+  background-color: $lightgray;
+
+  &::placeholder {
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: bold;
+    color: $black;
+  }
+}
+
+.form-review__footer {
+  margin-top: 46px;
+  padding: 0 20px;
+}
+
+.form-review__submit {
+  width: 100%;
+}
+
+.form-review__notice {
+  display: none;
+}
