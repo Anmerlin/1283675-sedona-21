@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HTML Academy: Седона - Фото и видео</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body class="page__body">
@@ -24,23 +25,23 @@
         </button>
         <ul class="main-navigation__list">
           <li class="main-navigation__item">
-            <a href="index.html">Главная</a>
+            <a class="main-navigation__link" href="index.html">Главная</a>
           </li>
           <li class="main-navigation__item">
-            <a href="gallery.html">Фото и видео</a>
+            <a class="main-navigation__link" href="gallery.html">Фото и видео</a>
           </li>
           <li class="main-navigation__item">
-            <a href="review.html">Форма отзыва</a>
+            <a class="main-navigation__link" href="review.html">Форма отзыва</a>
           </li>
           <li class="main-navigation__item">
-            <a href="https://htmlacademy.ru/">HTML Academy</a>
+            <a class="main-navigation__link" href="https://htmlacademy.ru/">HTML Academy</a>
           </li>
         </ul>
       </nav>
     </div>
 
-    <div class="page-header__intro">
-      <picture>
+    <div class="page-header__intro page-header__intro--inner">
+      <picture class="page-header__intro-slogan page-header__intro-slogan--inner">
         <source media="(min-width: 768px)" srcset="https://via.placeholder.com/460x80">
         <source media="(min-width: 768px)" srcset="https://via.placeholder.com/457x78">
         <img src="https://via.placeholder.com/229x39" alt="Добро пожаловать в Седону">
@@ -52,7 +53,7 @@
   <main class="page-main">
 
     <!-- Блок "Интро" описание всей страницы-->
-    <section class="intro intro--main">
+    <section class="intro intro--inner">
       <h1 class="intro__title">Фото и видео</h1>
       <p class="intro__desc">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и
         экономике.</p>
@@ -134,10 +135,10 @@
           <img src="https://via.placeholder.com/320x201" alt="Видеопрезентация">
         </picture>
         <div class="video__control control">
-          <button class="control__button control__button--replay" type="button"></button>
           <div class="control__progressbar">
             <span class="control__segment"></span>
           </div>
+          <button class="control__button control__button--replay" type="button"></button>
           <button class="control__button control__button--subtitles" type="button"></button>
           <button class="control__button control__button--fullscreen" type="button"></button>
         </div>
