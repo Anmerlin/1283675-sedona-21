@@ -111,18 +111,6 @@
     color: $black;
   }
 
-  &--name {
-    max-width: 230px;
-  }
-
-  &--surname {
-    max-width: 192px;
-  }
-
-  &--patronymic {
-    max-width: 194px;
-  }
-
   &[type="tel"],
   &[type="email"] {
     margin-top: 8px;
