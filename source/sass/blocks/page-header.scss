@@ -19,6 +19,12 @@
   height: 389px;
 
   background: $blue url("../img/photo-background.jpg") 50% 0 no-repeat;
+
+  &--inner {
+    height: 158px;
+
+    background: $blue url("../img/photo-background-inner.jpg") 50% 0 no-repeat;
+  }
 }
 
 .page-header__intro-slogan {
@@ -30,4 +36,10 @@
   width: 100%;
 
   transform: translateX(-50%);
+
+  &--inner {
+    top: 52px;
+
+    max-width: 229px;
+  }
 }
