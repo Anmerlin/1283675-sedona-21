@@ -1,9 +1,16 @@
 .intro {
+  max-width: $tablet-width;
+  margin: 0 auto;
   padding: 32px 18px 27px 17px;
+
   text-align: center;
 
   &--inner {
     padding: 36px 20px 16px;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 44px 120px 53px;
   }
 }
 
@@ -12,6 +19,12 @@
   font-size: 18px;
   line-height: 26px;
   color: $black;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 33px;
+
+    font-size: 21px;
+  }
 }
 
 .intro__desc {

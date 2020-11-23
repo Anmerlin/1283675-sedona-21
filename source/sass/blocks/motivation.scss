@@ -1,17 +1,44 @@
 .motivation {
+  max-width: $tablet-width;
+  margin: 0 auto;
   padding: 33px 20px 49px;
 
   line-height: 24px;
 
   text-align: center;
+
+  @media (min-width: $tablet-width) {
+    padding: 58px 155px;
+  }
 }
 
 .motivation__title {
   margin: 0 0 30px;
   font-size: 21px;
   line-height: 26px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 35px;
+
+    font-size: 30px;
+  }
+}
+
+.motivation__desc {
+  br {
+    @media (max-width: $mobile-width-max) {
+      display: none;
+    }
+  }
 }
 
 .motivation__button {
   margin-top: 27px;
+
+  @media (min-width: $tablet-width) {
+    max-width: 458px;
+    width: 100%;
+
+    margin-top: 37px;
+  }
 }
