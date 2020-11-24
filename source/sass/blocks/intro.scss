@@ -29,4 +29,10 @@
 
 .intro__desc {
   line-height: 26px;
+
+  br {
+    @media (max-width: $mobile-width-max) {
+      display: none;
+    }
+  }
 }

@@ -1,5 +1,18 @@
 .form-review {
-  margin-bottom: 48px;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto 48px;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+
+    padding: 0 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 0 120px;
+  }
 }
 
 .form-review__group {
@@ -8,6 +21,43 @@
 
   border: none;
   border-top: 1px solid $gray;
+
+  @media (min-width: $tablet-width) {
+    padding: 0;
+    width: 100%;
+
+    border-top-color: $darkgray-third;
+  }
+
+  &--impression {
+    @media (min-width: $tablet-width) {
+      order: -1;
+    }
+  }
+
+  &--half {
+    @media (min-width: $tablet-width) {
+      max-width: 50%;
+    }
+  }
+
+  &--attractions {
+    @media (min-width: $tablet-width) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @media (min-width: $desktop-width) {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+  }
+
+  &--contacts {
+    @media (min-width: $desktop-width) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
 }
 
 .form-review__group-title {
@@ -27,6 +77,12 @@
   text-align: center;
   border: none;
 
+  @media (min-width: $tablet-width) {
+    width: auto;
+
+    float: none;
+  }
+
   &::after {
     content: "";
     display: table;
@@ -35,10 +91,28 @@
 
   &--introduce {
     margin-bottom: 19px;
+
+    @media (min-width: $tablet-width) {
+      width: 100%;
+
+      text-align: left;
+    }
   }
 
   &--contacts {
     margin-bottom: 17px;
+
+    @media (min-width: $tablet-width) {
+      width: auto;
+      padding: 0 60px;
+    }
+
+    @media (min-width: $desktop-width) {
+      grid-column: 1 / -1;
+      max-width: fit-content;
+
+      margin-bottom: 0;
+    }
   }
 
   &--impression,
@@ -46,8 +120,30 @@
     margin-bottom: 25px;
   }
 
+  &--attractions {
+    @media (min-width: $tablet-width) {
+      grid-column: 1 / -1;
+      max-width: min-content;
+
+      padding: 0 65px;
+      margin-bottom: 0;
+    }
+  }
+
+  &--impression {
+    @media (min-width: $tablet-width) {
+      width: 100%;
+
+      text-align: left;
+    }
+  }
+
   &--emotion {
     margin-bottom: 15px;
+
+    @media (min-width: $tablet-width) {
+      padding: 0 75px;
+    }
   }
 }
 
@@ -75,6 +171,25 @@
       height: 58px;
 
       background-color: $gray-first;
+    }
+
+    @media (min-width: $desktop-width) {
+      flex-wrap: nowrap;
+
+      .form-review__group-name {
+        padding-left: 0;
+        padding-right: 16px;
+      }
+    }
+  }
+
+  &--phone {
+    @media (min-width: $desktop-width) {
+      padding-right: 79px;
+
+      &::after {
+        right: 79px;
+      }
     }
   }
 
@@ -115,6 +230,10 @@
   &[type="email"] {
     margin-top: 8px;
     margin-left: 0;
+
+    @media (min-width: $desktop-width) {
+      max-width: 316px;
+    }
   }
 }
 
@@ -138,12 +257,32 @@
 .form-review__footer {
   margin-top: 46px;
   padding: 0 20px;
+
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    width: 100%;
+    padding: 0;
+  }
 }
 
 .form-review__submit {
   width: 100%;
+
+  @media (min-width: $tablet-width) {
+    max-width: 324px;
+  }
 }
 
 .form-review__notice {
-  display: none;
+  font-size: 14px;
+  line-height: 26px;
+
+  @media (max-width: $mobile-width-max) {
+    display: none;
+  }
 }

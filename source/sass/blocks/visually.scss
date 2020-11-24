@@ -1,0 +1,13 @@
+.visually__tablet {
+  @media (min-width: $desktop-width) {
+    display: none;
+  }
+}
+
+.visually__desktop-only {
+  display: none;
+
+  @media (min-width: $desktop-width) {
+    display: inline-block;
+  }
+}
