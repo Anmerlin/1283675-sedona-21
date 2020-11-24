@@ -3,6 +3,12 @@
   min-height: 84px;
 
   overflow: hidden;
+
+  @media (min-width: $tablet-width) {
+    min-height: 56px;
+
+    overflow: visible;
+  }
 }
 
 .page-header__logo {
@@ -11,6 +17,10 @@
   left: 50%;
 
   transform: translateX(-50%);
+
+  @media (min-width: $tablet-width) {
+    z-index: 1;
+  }
 }
 
 .page-header__intro {
@@ -18,12 +28,18 @@
 
   height: 389px;
 
-  background: $blue url("../img/photo-background.jpg") 50% 0 no-repeat;
+  background: $blue url("../img/photo-background.jpg") 50% 0 / cover no-repeat;
 
   &--inner {
     height: 158px;
 
-    background: $blue url("../img/photo-background-inner.jpg") 50% 0 no-repeat;
+    background: $blue url("../img/photo-background-inner.jpg") 50% 0 / cover no-repeat;
+  }
+
+  @media (min-width: $tablet-width) {
+    height: 518px;
+
+    background-image: url("../img/photo-background-tablet.jpg");
   }
 }
 
@@ -41,5 +57,17 @@
     top: 52px;
 
     max-width: 229px;
+  }
+
+  @media (min-width: $tablet-width) {
+    top: 77px;
+
+    max-width: 461px;
+  }
+
+  @media (min-width: $desktop-width) {
+    top: 78px;
+
+    max-width: 460px;
   }
 }
