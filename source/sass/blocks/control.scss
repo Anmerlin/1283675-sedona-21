@@ -1,6 +1,13 @@
 .control {
   display: flex;
   flex-wrap: wrap;
+
+  @media (min-width: $tablet-width) {
+    flex-wrap: nowrap;
+    align-items: center;
+
+    background-color: rgba($black, 0.6);
+  }
 }
 
 .control__progressbar {
@@ -14,6 +21,10 @@
   padding: 0 22px;
 
   background-color: rgba($black, 0.6);
+
+  @media (min-width: $tablet-width) {
+    background-color: transparent;
+  }
 
   &::before {
     content: "";
@@ -55,6 +66,18 @@
   border: 1px solid $gray; // временно для визуального представления
 
   z-index: 1;
+
+  @media (min-width: $tablet-width) {
+    height: 100%;
+
+    background-color: transparent;
+  }
+
+  &--replay {
+    @media (min-width: $tablet-width) {
+      order: -1;
+    }
+  }
 
   &--subtitles {
     margin-left: auto;
