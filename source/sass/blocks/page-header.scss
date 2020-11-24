@@ -30,16 +30,28 @@
 
   background: $blue url("../img/photo-background.jpg") 50% 0 / cover no-repeat;
 
-  &--inner {
-    height: 158px;
-
-    background: $blue url("../img/photo-background-inner.jpg") 50% 0 / cover no-repeat;
-  }
-
   @media (min-width: $tablet-width) {
     height: 518px;
 
     background-image: url("../img/photo-background-tablet.jpg");
+  }
+
+  &--inner {
+    height: 158px;
+
+    background: $blue url("../img/photo-background-inner.jpg") 50% 0 / cover no-repeat;
+
+    @media (min-width: $tablet-width) {
+      height: 290px;
+
+      background-image: url("../img/photo-background-inner-tablet.jpg");
+    }
+
+    @media (min-width: $desktop-width) {
+      height: 301px;
+
+      background-image: url("../img/photo-background-inner-desktop.jpg");
+    }
   }
 }
 
@@ -53,12 +65,6 @@
 
   transform: translateX(-50%);
 
-  &--inner {
-    top: 52px;
-
-    max-width: 229px;
-  }
-
   @media (min-width: $tablet-width) {
     top: 77px;
 
@@ -69,5 +75,23 @@
     top: 78px;
 
     max-width: 460px;
+  }
+
+  &--inner {
+    top: 52px;
+
+    max-width: 229px;
+
+    @media (min-width: $tablet-width) {
+      top: 95px;
+
+      max-width: 457px;
+    }
+
+    @media (min-width: $desktop-width) {
+      top: 101px;
+
+      max-width: 460px;
+    }
   }
 }
