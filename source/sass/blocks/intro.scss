@@ -1,7 +1,7 @@
 .intro {
   max-width: $tablet-width;
   margin: 0 auto;
-  padding: 32px 18px 27px 17px;
+  padding: 31px 30px 34px;
 
   text-align: center;
 
@@ -12,22 +12,28 @@
   @media (min-width: $tablet-width) {
     padding: 44px 120px 53px;
   }
+
+  @media (min-width: $desktop-width) {
+    padding: 55px 120px 43px;
+  }
 }
 
 .intro__title {
-  margin: 0 0 38px;
+  margin: 0 0 29px;
   font-size: 18px;
-  line-height: 26px;
+  line-height: 27px;
   color: $black;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 33px;
+    margin-bottom: 29px;
 
     font-size: 21px;
   }
 }
 
 .intro__desc {
+  margin: 0;
+
   line-height: 26px;
 
   br {

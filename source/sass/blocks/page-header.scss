@@ -1,25 +1,28 @@
 .page-header__wrapper {
   position: relative;
-  min-height: 84px;
 
-  overflow: hidden;
+  $height: 56px;
+  min-height: $height;
+  padding-bottom: $height;
 
   @media (min-width: $tablet-width) {
-    min-height: 56px;
-
-    overflow: visible;
+    min-height: $height;
+    padding-bottom: 0;
   }
 }
 
 .page-header__logo {
   position: absolute;
-  top: 0;
+  bottom: -34px;
   left: 50%;
 
   transform: translateX(-50%);
 
+  z-index: 1;
+
   @media (min-width: $tablet-width) {
-    z-index: 1;
+    top: 0;
+    bottom: auto;
   }
 }
 
@@ -28,12 +31,51 @@
 
   height: 389px;
 
-  background: $blue url("../img/photo-background.jpg") 50% 0 / cover no-repeat;
+  background: $blue url("../img/photo-background.jpg") 50% 50% / cover no-repeat;
 
   @media (min-width: $tablet-width) {
     height: 518px;
 
     background-image: url("../img/photo-background-tablet.jpg");
+  }
+
+  &::before,
+  &::after {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    background-color: $white;
+
+    clip-path: polygon(0 100%, 100% 100%, 100% 0, 50% 100%, 0 0);
+  }
+
+  &::before {
+    content: "";
+
+    height: 28px;
+
+    @media (min-width: $tablet-width) {
+      right: auto;
+      left: 50%;
+
+      width: 702px;
+      height: 57px;
+      transform: translateX(-50%);
+    }
+  }
+
+  &::after {
+    @media (min-width: $tablet-width) {
+      content: "";
+
+      height: 37px;
+    }
+
+    @media (min-width: $desktop-width) {
+      height: 57px;
+    }
   }
 
   &--inner {

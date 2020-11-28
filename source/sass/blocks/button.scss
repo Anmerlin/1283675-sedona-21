@@ -1,11 +1,12 @@
 .button {
-  display: inline-block;
+  display: block;
   max-width: 280px;
   height: 58px;
   padding: 14px 32px 17px;
 
   font-size: 21px;
   line-height: 26px;
+  font-weight: bold;
   color: $white;
   text-transform: uppercase;
   text-align: center;
@@ -13,4 +14,21 @@
 
   border: none;
   background-color: $blue;
+
+  transition: background-color 0.4s, color 0.4s;
+
+  &:hover {
+    background-color: $grayblue;
+  }
+
+  &:active {
+    color: rgba($white, 0.3);
+
+    background-color: $darkblue;
+  }
+
+  &[disabled],
+  &--disabled {
+    background-color: $gray;
+  }
 }

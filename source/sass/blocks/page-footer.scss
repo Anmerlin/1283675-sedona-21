@@ -8,7 +8,6 @@
 
   @media (min-width: $tablet-width) {
     display: grid;
-    gap: 20px;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 120px;
     align-items: center;
@@ -28,10 +27,14 @@
   @media (min-width: $tablet-width) {
     margin-bottom: 0;
   }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 24px;
+  }
 }
 
 .page-footer__copyright {
-  margin-top: 45px;
+  margin-top: 40px;
 
   @media (min-width: $tablet-width) {
     margin-top: 0;

@@ -3,12 +3,99 @@
 
   max-width: $desktop-width;
   margin: 0 auto;
+
+  @media (max-width: $mobile-width-max) {
+    transition: max-height 0.4s linear;
+
+    &--show {
+      .main-navigation__toggle {
+        &::before,
+        &::after {
+          top: 27px;
+
+          width: 27px;
+
+          background-color: $white;
+        }
+
+        &::before {
+          transform: rotate(45deg);
+
+          box-shadow: none;
+        }
+
+        &::after {
+          content: "";
+
+          transform: rotate(-45deg);
+        }
+      }
+
+      .main-navigation__list {
+        max-height: 500px;
+
+        opacity: 1;
+        visibility: visible;
+
+        transition: max-height 0.4s, opacity 0.1s, visibility 0s;
+      }
+    }
+
+    &--nojs {
+      .main-navigation__toggle {
+        display: none;
+      }
+
+      .main-navigation__list {
+        max-height: 100%;
+
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
 }
 
 .main-navigation__toggle {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  width: 63px;
+  height: 56px;
   padding: 17px 20px;
 
   border: none;
+  background-color: transparent;
+
+  z-index: 1;
+
+  transition: opacity 0.4s;
+
+  &::before,
+  &::after {
+    position: absolute;
+    top: 17px;
+    left: 20px;
+
+    width: 23px;
+    height: 4px;
+
+    background-color: $blue;
+  }
+
+  &::before {
+    content: "";
+    box-shadow: 0 9px 0 0 $blue, 0 18px 0 0 $blue;
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 
   @media (min-width: $tablet-width) {
     display: none;
@@ -18,27 +105,60 @@
 .main-navigation__list {
   position: relative;
 
+  max-height: 0;
+  height: auto;
   margin: 0;
   padding: 0;
 
+  opacity: 0;
+  visibility: hidden;
+
   list-style: none;
+
+  overflow: hidden;
+
+  transition: max-height 0.4s, opacity 0.3s 0.1s, visibility 0s 0.3s;
 
   @media (min-width: $tablet-width) {
     display: flex;
     width: 100%;
+    max-height: 100%;
     min-height: 56px;
+
+    opacity: 1;
+    visibility: visible;
   }
 }
 
 .main-navigation__item {
   position: relative;
 
-  margin-bottom: 1px;
+  &:first-child {
+    .main-navigation__link {
+      &::before {
+        content: none;
+      }
+    }
+  }
 
-  box-shadow: 0 1px 0 rgba($black-second, 0.2);
+  &:last-child {
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      left: 0;
 
-  &:not(:first-child) {
-    box-shadow: 0 1px 0 rgba($black-second, 0.2), inset 0 1px 0 rgba($white, 0.2);
+      height: 7px;
+
+      background: linear-gradient(180deg, rgba($black, 0) 0%, rgba($black, 0.2) 100%);
+    }
+
+    .main-navigation__link {
+      &::after {
+        content: none;
+      }
+    }
   }
 
   @media (min-width: $tablet-width) {
@@ -48,12 +168,12 @@
 
     max-width: 153px;
     width: 100%;
-    margin-bottom: 0;
+    padding: 16px 10px 14px;
 
-    box-shadow: none;
-
-    &:not(:first-child) {
-      box-shadow: none;
+    &:last-child {
+      &::after {
+        content: none;
+      }
     }
 
     &--right-side {
@@ -67,22 +187,92 @@
 }
 
 .main-navigation__link {
-  display: block;
-  color: $white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 56px;
+  padding: 10px 63px 5px;
 
   font-size: 18px;
   line-height: 40px;
   font-weight: bold;
+  color: $white;
   text-align: center;
   text-decoration: none;
 
   background-color: $blue;
 
+  @media (max-width: $mobile-width-max) {
+    transition: background-color 0.4s, color 0.4s;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      left: 0;
+
+      height: 1px;
+    }
+
+    &::before {
+      top: 0;
+
+      background-color: rgba($white, 0.2);
+    }
+
+    &::after {
+      bottom: 0;
+
+      background-color: rgba($black-second, 0.2);
+    }
+  }
+
+  &:hover {
+    @media (max-width: $mobile-width-max) {
+      background-color: $grayblue;
+    }
+
+    @media (min-width: $tablet-width) {
+      color: $blue;
+    }
+  }
+
+  &:active {
+    @media (max-width: $mobile-width-max) {
+      color: rgba($white, 0.3);
+
+      background-color: $darkblue;
+    }
+
+    @media (min-width: $tablet-width) {
+      color: rgba($black, 0.3);
+    }
+  }
+
   @media (min-width: $tablet-width) {
+    min-height: auto;
+    padding: 0;
+
     font-size: 14px;
     line-height: 26px;
     color: $black;
 
     background-color: transparent;
+
+    transition: color 0.4s;
+
+    &--active {
+      color: $lightbrown;
+
+      &:hover {
+        color: $brown;
+      }
+
+      &:active {
+        color: rgba($lightbrown, 0.3);
+      }
+    }
   }
 }
