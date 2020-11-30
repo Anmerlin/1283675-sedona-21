@@ -12,6 +12,8 @@
 }
 
 .social-list__link {
+  position: relative;
+
   display: block;
   width: 46px;
   height: 48px;
@@ -19,4 +21,57 @@
   color: $white;
 
   background-color: $blue;
+
+  transition: background-color 0.4s;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+
+    height: 100%;
+
+    transform: translateX(-50%);
+
+    background-repeat: no-repeat;
+    background-position-y: 50%;
+
+    transition: opacity 0.4s;
+  }
+
+  &--twitter {
+    &::before {
+      width: 18px;
+
+      background-image: url("../img/icon-twitter.svg");
+    }
+  }
+
+  &--facebook {
+    &::before {
+      width: 9px;
+
+      background-image: url("../img/icon-facebook.svg");
+    }
+  }
+
+  &--youtube {
+    &::before {
+      width: 20px;
+
+      background-image: url("../img/icon-youtube.svg");
+    }
+  }
+
+  &:hover {
+    background-color: $grayblue;
+  }
+
+  &:active {
+    background-color: $darkblue;
+
+    &::before {
+      opacity: 0.3;
+    }
+  }
 }
