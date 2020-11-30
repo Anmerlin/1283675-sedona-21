@@ -24,7 +24,7 @@
 .photo__card {
   position: relative;
   margin: 0;
-  padding: 22px 20px 15px;
+  padding: 22px 20px 16px;
 
   border-top: 1px solid $gray;
 
@@ -39,6 +39,18 @@
       grid-column: 1 / -1;
     }
   }
+
+  &:nth-of-type(2n) {
+    .photo__card-info {
+      padding-right: 30px;
+    }
+  }
+
+  &:nth-of-type(2n + 3) {
+    .photo__card-info {
+      padding-right: 37px;
+    }
+  }
 }
 
 .photo__card-picture {
@@ -51,7 +63,7 @@
 }
 
 .photo__card-info {
-  margin-top: 11px;
+  margin-top: 10px;
 
   @media (min-width: $tablet-width) {
     display: flex;
@@ -59,7 +71,7 @@
     justify-content: space-between;
 
     margin-top: 0;
-    padding: 22px 15px 20px;
+    padding: 15px 21px 16px 19px;
 
     background-color: $lightgray;
   }
@@ -70,6 +82,7 @@
     bottom: 0;
     left: 0;
 
+    padding-left: 21px;
     color: $white;
 
     background-color: rgba($black, 0.3);
@@ -92,8 +105,9 @@
 }
 
 .photo__card-title {
-  margin: 0 0 10px;
+  margin: 0 0 1px;
 
+  font-size: 14px;
   color: $black;
 
   @media (min-width: $desktop-width) {
@@ -107,9 +121,34 @@
 }
 
 .photo__card-like {
-  display: inline-block;
-  margin-top: 10px;
+  display: flex;
+  margin-top: 11px;
 
   line-height: 24px;
   font-weight: bold;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 1px;
+  }
+
+  svg {
+    width: 23px;
+    height: 21px;
+    margin-right: 14px;
+
+    fill: rgba($black, 0.3);
+
+    @media (min-width: $tablet-width) {
+      margin-right: 9px;
+    }
+
+    @media (min-width: $desktop-width) {
+      fill: $white;
+    }
+  }
+
+  span {
+    display: inline-block;
+    padding-top: 2px;
+  }
 }
