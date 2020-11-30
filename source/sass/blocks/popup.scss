@@ -1,4 +1,11 @@
 .popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+
+  display: flex; // при подключени скриптов убрать
+  flex-direction: column;
+  align-items: center;
   width: 100%;
   margin: 0 auto;
   padding-top: 38px;
@@ -6,24 +13,44 @@
   text-align: center;
 
   background-color: $white;
+  transform: translate(-50%, -50%);
+
+  z-index: 10;
 
   &--success {
     max-width: 640px;
+    padding-top: 46px;
   }
 
   &--failure {
     max-width: 400px;
-    padding: 40px 41px 35px;
+    padding: 48px 41px 35px;
+
+    @media (min-width: $tablet-width) {
+      padding-left: 55px;
+      padding-right: 55px;
+      padding-bottom: 49px;
+    }
   }
 }
 
 .popup__title {
-  margin: 0 0 35px;
+  margin: 0 0 26px;
   font-size: 18px;
   line-height: 26px;
+
+  @media (min-width: $tablet-width) {
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 25px;
+
+    font-size: 30px;
+    line-height: 40px;
+  }
 }
 
 .popup__desc {
+  margin: 0;
   padding: 0 37px;
 
   line-height: 24px;
@@ -34,19 +61,44 @@
 }
 
 .popup__wrapper {
-  margin-top: 50px;
+  width: 100%;
+  margin-top: 38px;
   padding: 20px;
 
   background-color: $lightgray;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 42px;
+    padding: 44px 20px;
+  }
 }
 
 .popup__button-success {
   width: 100%;
+  padding-top: 17px;
+
+  font-size: 18px;
+
+  @media (min-width: $tablet-width) {
+    max-width: 458px;
+    margin: 0 auto;
+
+    font-size: 21px;
+  }
 }
 
 .popup__button-failure {
   max-width: 180px;
   width: 100%;
+  margin-top: 24px;
+  padding-top: 18px;
 
-  margin-top: 25px;
+  font-size: 18px;
+
+  @media (min-width: $tablet-width) {
+    max-width: 272px;
+    margin-top: 38px;
+
+    font-size: 21px;
+  }
 }

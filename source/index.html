@@ -21,7 +21,7 @@
         </button>
         <ul class="main-navigation__list">
           <li class="main-navigation__item">
-            <a class="main-navigation__link main-navigation__link--active" href="index.html">Главная</a>
+            <a class="main-navigation__link main-navigation__link--active">Главная</a>
           </li>
           <li class="main-navigation__item">
             <a class="main-navigation__link" href="gallery.html">Фото и видео</a>
@@ -176,51 +176,9 @@
     </div>
   </footer>
 
-  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
-
-  <script>
-    var navMain = document.querySelector('.main-navigation');
-    var navToggle = document.querySelector('.main-navigation__toggle');
-
-    navMain.classList.remove('main-navigation--nojs');
-
-    navToggle.addEventListener('click', function () {
-      navMain.classList.toggle('main-navigation--show');
-    });
-
-    ymaps.ready(init);
-
-    function init() {
-      var behaviors = ['drag', 'dblClickZoom', 'multiTouch', 'zoom'];
-      var myMap = new ymaps.Map('map', {
-          behaviors: behaviors,
-          center: [34.869726184622785, -111.76009820576179],
-          controls: [],
-          zoom: 10
-        }, {
-          suppressMapOpenBlock: true,
-        }),
-        myPlacemark = new ymaps.Placemark([34.869726184622785, -111.76009820576179], {
-          hintContent: 'Седона'
-        }, {
-          iconLayout: 'default#image',
-          iconImageHref: 'img/map-marker.svg',
-          iconImageSize: [27, 27],
-          iconImageOffset: [-13, -13]
-        })
-
-      myMap.controls.add('zoomControl', {
-        size: "small",
-        position: {
-          top: 20,
-          left: 20
-        }
-      });
-
-      myMap.geoObjects.add(myPlacemark);
-    }
-
-  </script>
+  <script src="js/menu.js"></script>
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+  <script src="js/map.js"></script>
 
 </body>
 

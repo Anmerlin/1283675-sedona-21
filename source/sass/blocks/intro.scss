@@ -5,16 +5,36 @@
 
   text-align: center;
 
-  &--inner {
-    padding: 36px 20px 16px;
-  }
-
   @media (min-width: $tablet-width) {
     padding: 44px 120px 53px;
   }
 
   @media (min-width: $desktop-width) {
     padding: 55px 120px 43px;
+  }
+
+  &--inner {
+    padding: 36px 20px 17px;
+
+    @media (min-width: $tablet-width) {
+      padding-top: 61px;
+      padding-bottom: 87px;
+    }
+
+    @media (min-width: $desktop-width) {
+      padding-top: 112px;
+      padding-bottom: 58px;
+    }
+
+    .intro__title {
+      margin-bottom: 27px;
+
+      @media (min-width: $tablet-width) {
+        margin-bottom: 33px;
+
+        font-size: 30px;
+      }
+    }
   }
 }
 
@@ -40,5 +60,9 @@
     @media (max-width: $mobile-width-max) {
       display: none;
     }
+  }
+
+  &--inner {
+    line-height: 24px;
   }
 }
