@@ -43,7 +43,7 @@
   &::after {
     position: absolute;
     right: 0;
-    bottom: 0;
+    bottom: -1px;
     left: 0;
 
     background-color: $white;
@@ -54,14 +54,14 @@
   &::before {
     content: "";
 
-    height: 28px;
+    height: 29px;
 
     @media (min-width: $tablet-width) {
       right: auto;
       left: 50%;
 
       width: 702px;
-      height: 57px;
+      height: 58px;
       transform: translateX(-50%);
     }
   }
@@ -70,11 +70,11 @@
     @media (min-width: $tablet-width) {
       content: "";
 
-      height: 37px;
+      height: 38px;
     }
 
     @media (min-width: $desktop-width) {
-      height: 57px;
+      height: 58px;
     }
   }
 
