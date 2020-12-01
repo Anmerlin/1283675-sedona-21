@@ -244,11 +244,9 @@
 }
 
 .advantages__item-picture {
-  display: flex;
-
   @media (min-width: $tablet-width) {
     flex-grow: 1;
-    flex-shrink: 0;
+    min-width: 512px;
   }
 
   img {
