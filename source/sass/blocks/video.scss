@@ -1,41 +1,58 @@
 .video {
-  margin: 32px auto 0;
+  max-width: 920px;
+  width: 100%;
+  margin: 32px auto 39px;
 
   text-align: center;
 
   @media (min-width: $tablet-width) {
-    margin-top: 59px;
+    margin-top: 57px;
+    margin-bottom: 40px;
     padding: 0 60px;
   }
 
   @media (min-width: $desktop-width) {
     max-width: 800px;
-    margin-top: 63px;
+    margin-top: 61px;
+    margin-bottom: 85px;
     padding: 0;
   }
 }
 
 .video__title {
-  margin: 0 0 35px;
+  margin: 0 0 28px;
 
   font-size: 18px;
   line-height: 26px;
   color: $black;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 33px;
+
+    font-size: 30px;
+  }
 }
 
 .video__desc {
-  margin: 0 20px 30px;
+  margin: 0 20px 34px;
   padding: 0 20px;
 
   line-height: 24px;
 
+  @media (max-width: $mobile-width-max) {
+    br {
+      display: none;
+    }
+  }
+
   @media (min-width: $tablet-width) {
-    padding: 0 15%;
+    margin-bottom: 80px;
   }
 
   @media (min-width: $desktop-width) {
     margin-right: 0;
     margin-left: 0;
+    margin-bottom: 78px;
     padding: 0 22%;
   }
 }
@@ -65,21 +82,10 @@
   bottom: 0;
   left: 0;
 
+  height: 66px;
   margin: 0 20px;
 
-  @media (max-width: $mobile-width-max) {
-    &::after {
-      content: "";
-      position: absolute;
-      right: 0;
-      bottom: 0;
-      left: 0;
-
-      height: 66px;
-
-      background-color: $lightgray;
-    }
-  }
+  background-color: $lightgray;
 
   @media (min-width: $tablet-width) {
     margin: 0;

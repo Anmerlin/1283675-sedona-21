@@ -35,6 +35,21 @@
         font-size: 30px;
       }
     }
+
+    .page__body--gallery & {
+      padding-top: 32px;
+      padding-bottom: 31px;
+
+      @media (min-width: $tablet-width) {
+        padding-top: 62px;
+        padding-bottom: 78px;
+      }
+
+      @media (min-width: $desktop-width) {
+        padding-top: 99px;
+        padding-bottom: 80px;
+      }
+    }
   }
 }
 

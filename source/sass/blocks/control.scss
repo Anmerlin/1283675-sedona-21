@@ -11,7 +11,10 @@
 }
 
 .control__progressbar {
-  position: relative;
+  position: absolute;
+  top: -45px;
+  right: 0;
+  left: 0;
 
   display: flex;
   align-items: center;
@@ -23,6 +26,12 @@
   background-color: rgba($black, 0.6);
 
   @media (min-width: $tablet-width) {
+    position: relative;
+    top: 0;
+
+    padding-right: 36px;
+    padding-left: 37px;
+
     background-color: transparent;
   }
 
@@ -38,13 +47,18 @@
     transform: translateY(-50%);
 
     background-color: rgba($white, 0.2);
+
+    @media (min-width: $tablet-width) {
+      right: 36px;
+      left: 37px;
+    }
   }
 }
 
 .control__segment {
   position: absolute;
   top: 50%;
-  left: 57px;
+  left: 58px;
 
   display: inline-block;
   width: 9px;
@@ -55,6 +69,10 @@
   border-radius: 50%;
 
   background-color: $white;
+
+  @media (min-width: $tablet-width) {
+    left: 150px;
+  }
 }
 
 .control__button {
@@ -63,9 +81,18 @@
   width: 66px;
   height: 66px;
 
-  border: 1px solid $gray; // временно для визуального представления
+  border: none;
+  background-color: transparent;
 
   z-index: 1;
+
+  svg {
+    fill: $lightblack-second;
+
+    @media (min-width: $tablet-width) {
+      fill: $white;
+    }
+  }
 
   @media (min-width: $tablet-width) {
     height: 100%;
@@ -74,12 +101,51 @@
   }
 
   &--replay {
+    svg {
+      width: 16px;
+      height: 20px;
+    }
+
     @media (min-width: $tablet-width) {
+      width: 26px;
+      height: 30px;
+      margin-bottom: 5px;
+      margin-left: 29px;
+      padding: 5px;
       order: -1;
     }
   }
 
   &--subtitles {
     margin-left: auto;
+    padding-left: 21px;
+
+    svg {
+      width: 32px;
+      height: 20px;
+    }
+
+    @media (min-width: $tablet-width) {
+      width: 32px;
+      height: 20px;
+      margin-bottom: 11px;
+      margin-right: 31px;
+      padding: 5px;
+    }
+  }
+
+  &--fullscreen {
+    svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    @media (min-width: $tablet-width) {
+      width: 20px;
+      height: 20px;
+      margin-bottom: 11px;
+      margin-right: 47px;
+      padding: 5px;
+    }
   }
 }
