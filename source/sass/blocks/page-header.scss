@@ -13,7 +13,7 @@
 
 .page-header__logo {
   position: absolute;
-  bottom: -34px;
+  bottom: -28px;
   left: 50%;
 
   transform: translateX(-50%);
@@ -26,17 +26,35 @@
   }
 }
 
+.page-header__logo-image {
+  width: auto;
+  height: auto;
+}
+
 .page-header__intro {
   position: relative;
 
   height: 389px;
 
-  background: $blue url("../img/photo-background.jpg") 50% 50% / cover no-repeat;
+  background-color: $blue;
+  background-image: url("../img/photo-background-mobile@1x.jpg");
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/photo-background-mobile@2x.jpg");
+    // background-size: 1338px auto;
+  }
 
   @media (min-width: $tablet-width) {
     height: 518px;
 
-    background-image: url("../img/photo-background-tablet.jpg");
+    background-image: url("../img/photo-background-tablet@1x.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/photo-background-tablet@2x.jpg");
+    }
   }
 
   &::before,
@@ -81,18 +99,27 @@
   &--inner {
     height: 158px;
 
-    background: $blue url("../img/photo-background-inner.jpg") 50% 0 / cover no-repeat;
+    // актуальные изображения в следующем таске
+    background-color: $blue;
+    background-image: url("../img/photo-background-inner.jpg");
+    background-position: 50% 0;
+    background-size: cover;
+    background-repeat: no-repeat;
 
     @media (min-width: $tablet-width) {
       height: 290px;
 
-      background-image: url("../img/photo-background-inner-tablet.jpg");
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/photo-background-inner-tablet@2x.jpg");
+      }
     }
 
     @media (min-width: $desktop-width) {
       height: 301px;
 
-      background-image: url("../img/photo-background-inner-desktop.jpg");
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/photo-background-inner-desktop@2x.jpg");
+      }
     }
   }
 }
