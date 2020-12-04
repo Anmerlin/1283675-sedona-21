@@ -213,9 +213,13 @@
     position: relative;
     flex-wrap: wrap;
 
+    &::before,
     &::after {
       content: "";
       position: absolute;
+    }
+
+    &::before {
       right: 0;
       bottom: 0;
 
@@ -223,8 +227,15 @@
       height: 58px;
 
       background-color: $gray-first;
+
+      @media (min-width: $desktop-width) {
+        right: 79px;
+      }
+    }
+
+    &::after {
+      background-image: url("../img/sprite-css.svg");
       background-repeat: no-repeat;
-      background-position: 50% 50%;
     }
 
     @media (min-width: $desktop-width) {
@@ -242,8 +253,13 @@
     margin-bottom: 12px;
 
     &::after {
-      background-image: url("../img/icon-phone.svg");
-      background-size: 18px;
+      right: 19px;
+      bottom: 20px;
+
+      width: 18px;
+      height: 18px;
+
+      background-position: -60px 0;
     }
 
     @media (min-width: $tablet-width) {
@@ -254,7 +270,7 @@
       padding-right: 79px;
 
       &::after {
-        right: 79px;
+        right: 99px;
       }
     }
   }
@@ -263,8 +279,13 @@
     margin-bottom: 22px;
 
     &::after {
-      background-image: url("../img/icon-email.svg");
-      background-size: 16px;
+      right: 21px;
+      bottom: 23px;
+
+      width: 16px;
+      height: 12px;
+
+      background-position: -85px 0;
     }
   }
 
@@ -458,7 +479,7 @@
 }
 
 .form-review__footer {
-  margin-top: 40px;
+  margin-top: 38px;
   padding: 0 20px;
 
   text-align: center;
@@ -481,6 +502,7 @@
 .form-review__submit {
   width: 100%;
   padding-top: 19px;
+  padding-bottom: 14px;
 
   @media (min-width: $tablet-width) {
     max-width: 324px;
@@ -494,6 +516,8 @@
 }
 
 .form-review__notice {
+  padding-top: 2px;
+
   font-size: 14px;
   line-height: 26px;
 
