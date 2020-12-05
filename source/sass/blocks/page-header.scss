@@ -143,38 +143,35 @@
   top: 90px;
   left: 50%;
 
-  max-width: 282px;
-  width: 100%;
+  width: 282px;
+  height: 214px;
 
   transform: translateX(-50%);
 
   @media (min-width: $tablet-width) {
     top: 77px;
 
-    max-width: 461px;
-  }
-
-  @media (min-width: $desktop-width) {
-    top: 78px;
-
-    max-width: 460px;
+    width: 460px;
+    height: 350px;
   }
 
   &--inner {
     top: 52px;
 
-    max-width: 229px;
+    width: 229px;
+    height: 40px;
+
+    fill: $white;
 
     @media (min-width: $tablet-width) {
       top: 95px;
 
-      max-width: 457px;
+      width: 460px;
+      height: 80px;
     }
 
     @media (min-width: $desktop-width) {
       top: 101px;
-
-      max-width: 460px;
     }
   }
 }
