@@ -26,13 +26,13 @@ exports.clean = clean;
 // Copy
 const copy = (done) => {
   return gulp.src([
-    "source/fonts/*.{woff2,woff}",
-    "source/favicon/*.*",
-    "source/img/*.{jpg,png,svg}"
-  ], {
-    base: "source"
-  })
-  .pipe(gulp.dest("build"))
+      "source/fonts/*.{woff2,woff}",
+      "source/favicon/*.*",
+      "source/img/*.{jpg,png,svg}"
+    ], {
+      base: "source"
+    })
+    .pipe(gulp.dest("build"))
   done()
 }
 
@@ -40,38 +40,47 @@ exports.copy = copy;
 
 // Images
 const images = () => {
-  return gulp.src("source/img/**/*.{jpg,png,svg}", {dot: true, ignore: 'source/img/**/sprite-css.svg'})
-  .pipe(imagemin([
-    imagemin.optipng({ optimizationLevel: 3 }),
-    imagemin.mozjpeg({ progressive: true }),
-    imagemin.svgo()
-  ]))
-  .pipe(gulp.dest("build/img"))
- }
+  return gulp.src("source/img/**/*.{jpg,png,svg}", {
+      dot: true,
+      ignore: 'source/img/**/sprite-css.svg'
+    })
+    .pipe(imagemin([
+      imagemin.optipng({
+        optimizationLevel: 3
+      }),
+      imagemin.mozjpeg({
+        progressive: true
+      }),
+      imagemin.svgo()
+    ]))
+    .pipe(gulp.dest("build/img"))
+}
 
- exports.images = images;
+exports.images = images;
 
 // Webp
 const imagesToWebp = () => {
   return gulp.src("source/img/**/*.{jpg,png}")
-    .pipe(webp({quality: 80}))
+    .pipe(webp({
+      quality: 80
+    }))
     .pipe(gulp.dest("build/img"))
- }
+}
 
 exports.imagesToWebp = imagesToWebp;
 
 // Sprite
 const sprite = () => {
   return gulp.src("source/img/sprite/*.svg")
-      .pipe(
-        svgmin({
-          plugins: [{
-            removeViewBox: false
-          }]
-        }))
-      .pipe(svgstore())
-      .pipe(rename("sprite.svg"))
-      .pipe(gulp.dest("build/img"))
+    .pipe(
+      svgmin({
+        plugins: [{
+          removeViewBox: false
+        }]
+      }))
+    .pipe(svgstore())
+    .pipe(rename("sprite.svg"))
+    .pipe(gulp.dest("build/img"))
 }
 
 exports.sprite = sprite;
@@ -99,13 +108,13 @@ const scripts = () => {
   return gulp.src("source/js/app.js")
     .pipe(sourcemap.init())
     .pipe(rollup({
-			input: 'source/js/app.js'
-		}, 'umd'))
+      input: 'source/js/app.js'
+    }, 'umd'))
     .pipe(rename("scripts.min.js"))
-		.pipe(uglify())
+    .pipe(uglify())
     .pipe(sourcemap.write('.'))
     .pipe(gulp.dest("build/js"))
-		.pipe(sync.stream());
+    .pipe(sync.stream());
 }
 
 exports.scripts = scripts;
@@ -113,7 +122,9 @@ exports.scripts = scripts;
 // Html
 const html = () => {
   return gulp.src("source/*.html")
-    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(htmlmin({
+      collapseWhitespace: true
+    }))
     .pipe(gulp.dest("build"))
     .pipe(sync.stream());
 }
