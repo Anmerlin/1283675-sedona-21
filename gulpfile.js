@@ -9,7 +9,6 @@ const autoprefixer = require("autoprefixer");
 const del = require("del");
 const webp = require("gulp-webp");
 const svgstore = require("gulp-svgstore");
-const svgmin = require("gulp-svgmin");
 const imagemin = require("gulp-imagemin");
 const htmlmin = require("gulp-htmlmin");
 const rollup = require("gulp-better-rollup");
@@ -40,10 +39,7 @@ exports.copy = copy;
 
 // Images
 const images = () => {
-  return gulp.src("source/img/**/*.{jpg,png,svg}", {
-      dot: true,
-      ignore: 'source/img/**/sprite-css.svg'
-    })
+  return gulp.src("source/img/*.{jpg,png,svg}")
     .pipe(imagemin([
       imagemin.optipng({
         optimizationLevel: 3
@@ -72,13 +68,9 @@ exports.imagesToWebp = imagesToWebp;
 // Sprite
 const sprite = () => {
   return gulp.src("source/img/sprite/*.svg")
-    .pipe(
-      svgmin({
-        plugins: [{
-          removeViewBox: false
-        }]
-      }))
-    .pipe(svgstore())
+    .pipe(svgstore({
+      inlineSvg: true
+    }))
     .pipe(rename("sprite.svg"))
     .pipe(gulp.dest("build/img"))
 }
