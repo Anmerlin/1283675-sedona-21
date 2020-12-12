@@ -85,7 +85,7 @@ const styles = () => {
     .pipe(sass())
     .pipe(postcss([
       autoprefixer(),
-      csso()
+      csso({ comments: false })
     ]))
     .pipe(rename("styles.min.css"))
     .pipe(sourcemap.write("."))

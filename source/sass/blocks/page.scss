@@ -17,4 +17,8 @@
   text-transform: uppercase;
 
   background-color: $white;
+
+  &--popup-show {
+    overflow: hidden;
+  }
 }

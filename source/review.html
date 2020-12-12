@@ -5,6 +5,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>HTML Academy: Седона - Оставить отзыв</title>
+  <meta name="description" content="Оставьте отзыв об отелях Седоны">
+
+  <link rel="preload" href="css/styles.min.css" as="style">
+  <link rel="preload" href="fonts/ptsans.woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="fonts/ptsansbold.woff2" as="font" crossorigin="anonymous">
 
   <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
@@ -176,19 +181,20 @@
     </div>
   </footer>
 
-  <!-- при подключении скриптов убрать style  -->
-  <div class="popup popup--success" id="success" style="display: none;">
-    <h2 class="popup__title">Ваш отзыв отправлен!</h2>
-    <p class="popup__desc">Спасибо за ваше участие, ваш отзыв уже поступил к нам.<br> В ближайшее время мы опубликуем его на сайте.</p>
-    <div class="popup__wrapper">
-      <button class="popup__button-success button" type="button">Закрыть окно</button>
+  <div class="popup popup--container">
+    <div class="popup__section popup__section--success" id="success">
+      <h2 class="popup__title">Ваш отзыв отправлен!</h2>
+      <p class="popup__desc">Спасибо за ваше участие, ваш отзыв уже поступил к нам.<br> В ближайшее время мы опубликуем его на сайте.</p>
+      <div class="popup__wrapper">
+        <button class="popup__button-success button" type="button">Закрыть окно</button>
+      </div>
     </div>
-  </div>
 
-  <div class="popup popup--failure" id="failure" style="display: none;">
-    <h2 class="popup__title">Что-то пошло не так!</h2>
-    <p class="popup__desc popup__desc--failure">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
-    <button class="popup__button-failure button" type="button">Ок</button>
+    <div class="popup__section popup__section--failure" id="failure">
+      <h2 class="popup__title">Что-то пошло не так!</h2>
+      <p class="popup__desc popup__desc--failure">Проверьте поля, выделенные красным, скорее всего вы забыли их заполнить</p>
+      <button class="popup__button-failure button" type="button">Ок</button>
+    </div>
   </div>
 
   <script src="js/scripts.min.js"></script>

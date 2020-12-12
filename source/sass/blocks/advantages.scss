@@ -322,11 +322,11 @@
 
     .advantages__item-title {
       @media (min-width: $tablet-width) {
-        padding: 0 21px;
+        padding: 0 21px 0 20px;
       }
 
       @media (min-width: $desktop-width) {
-        padding: 0 40px;
+        padding: 0 39px 0 40px;
       }
     }
   }
