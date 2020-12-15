@@ -1,28 +1,28 @@
-var form = document.querySelector('.form-review');
+const form = document.querySelector('.form-review');
 
 if (form) {
 
   form.setAttribute('novalidate', true);
 
-  var body = document.querySelector('body');
-  var popup = document.querySelector('.popup--container');
+  const body = document.querySelector('body');
+  const popup = document.querySelector('.popup--container');
 
-  var firstname = document.querySelector('[name=name]');
-  var surname = document.querySelector('[name=surname]');
-  var phone = document.querySelector('[name=phone]');
-  var email = document.querySelector('[name=email]');
-  var inputs = document.querySelectorAll('.form-review__group-text');
+  const firstname = document.querySelector('[name=name]');
+  const surname = document.querySelector('[name=surname]');
+  const phone = document.querySelector('[name=phone]');
+  const email = document.querySelector('[name=email]');
+  const inputs = document.querySelectorAll('.form-review__group-text');
 
-  var failure = document.querySelector('#failure');
-  var failureBtnClose = document.querySelector('.popup__button-failure');
-  var success = document.querySelector('#success');
-  var successBtnClose = document.querySelector('.popup__button-success');
+  const failure = document.querySelector('#failure');
+  const failureBtnClose = document.querySelector('.popup__button-failure');
+  const success = document.querySelector('#success');
+  const successBtnClose = document.querySelector('.popup__button-success');
 
-  var isStorageSupport = true;
-  var storageName = '';
-  var storageSurname = '';
-  var storagePhone = '';
-  var storageEmail = '';
+  let isStorageSupport = true;
+  let storageName = '';
+  let storageSurname = '';
+  let storagePhone = '';
+  let storageEmail = '';
 
   try {
     storageName = localStorage.getItem('name');
@@ -74,7 +74,7 @@ if (form) {
   }, false);
 
 
-  for (var input of inputs) {
+  for (let input of inputs) {
     input.addEventListener('input', function (event) {
       if (this.classList.contains('form-review__group-text--invalid')) {
         this.classList.remove('form-review__group-text--invalid')

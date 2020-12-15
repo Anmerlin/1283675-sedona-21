@@ -392,6 +392,14 @@
     }
   }
 
+  [type="radio"]:focus + .form-review__group-name,
+  [type="checkbox"]:focus + .form-review__group-name {
+    &::before {
+      background-color: $darkgray;
+      outline: 2px solid $black-second;
+    }
+  }
+
   [type="radio"] + .form-review__group-name {
     &::before {
       margin-right: 21px;

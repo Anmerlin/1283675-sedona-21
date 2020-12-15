@@ -1,9 +1,13 @@
-if (document.querySelector('#map')) {
+const map = document.querySelector('#map');
+
+if (map) {
+  map.classList.remove('map__wrapper--nojs');
+
   ymaps.ready(init);
 
   function init() {
-    var behaviors = ['drag', 'dblClickZoom', 'multiTouch', 'zoom'];
-    var myMap = new ymaps.Map('map', {
+    const behaviors = ['drag', 'dblClickZoom', 'multiTouch', 'zoom'];
+    let myMap = new ymaps.Map('map', {
         behaviors: behaviors,
         center: [34.869726184622785, -111.76009820576179],
         controls: [],

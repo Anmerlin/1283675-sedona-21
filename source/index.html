@@ -61,14 +61,15 @@
     </div>
 
     <div class="page-header__intro">
-      <svg class="page-header__intro-slogan" width="282" height="214" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Добро пожаловать в Седону">
+      <svg class="page-header__intro-slogan" width="282" height="214" xmlns="http://www.w3.org/2000/svg" role="img"
+        aria-label="Добро пожаловать в Седону">
         <use xlink:href="img/sprite.svg#text-index"></use>
       </svg>
     </div>
 
   </header>
 
-  <main class="page-main">
+  <main class="page__main">
 
     <section class="intro intro--main">
       <h1 class="intro__title">Седона — небольшой городок в Аризоне, заслуживающий большего!</h1>
@@ -121,14 +122,14 @@
             <p>— №2 —</p>
             <p>Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
           </div>
-          <div class="advantages__item-picture advantages__item-picture--invert" >
+          <div class="advantages__item-picture advantages__item-picture--invert">
             <picture>
               <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-bridge-desktop@1x.webp 1x, img/photo-bridge-desktop@2x.webp 2x">
               <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-bridge-tablet@1x.webp 1x, img/photo-bridge-tablet@2x.webp 2x">
               <source type="image/webp" srcset="img/photo-bridge-mobile@1x.webp 1x, img/photo-bridge-mobile@2x.webp 2x">
               <source media="(min-width: 1200px)" srcset="img/photo-bridge-desktop@1x.jpg 1x, img/photo-bridge-desktop@2x.jpg 2x">
               <source media="(min-width: 768px)" srcset="img/photo-bridge-tablet@1x.jpg 1x, img/photo-bridge-tablet@2x.jpg 2x">
-              <img src="img/photo-bridge-mobile@1x.jpg" srcset="img/photo-bridge-mobile@2x.jpg 2x"  width="320" height="260" alt="Фото городка">
+              <img src="img/photo-bridge-mobile@1x.jpg" srcset="img/photo-bridge-mobile@2x.jpg 2x" width="320" height="260" alt="Фото городка">
             </picture>
           </div>
         </li>
@@ -160,13 +161,14 @@
     <section class="motivation">
       <h2 class="visually-hidden">Возможность найти лучшие предложения гостиниц</h2>
       <h2 class="motivation__title">Заинтересовались?</h2>
-      <p class="motivation__desc">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+      <p class="motivation__desc">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц
+        в Седоне</p>
       <a class="motivation__button button" href="#">Найти гостиницу</a>
     </section>
 
     <section class="map">
       <h2 class="visually-hidden">Местонахождение города</h2>
-      <div class="map__wrapper" id="map"></div>
+      <div class="map__wrapper map__wrapper--nojs" id="map"></div>
     </section>
 
   </main>
