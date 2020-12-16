@@ -84,6 +84,10 @@ const styles = () => {
     .pipe(sourcemap.init())
     .pipe(sass())
     .pipe(postcss([
+      autoprefixer()
+    ]))
+    .pipe(gulp.dest("build/css"))
+    .pipe(postcss([
       autoprefixer(),
       csso({ comments: false })
     ]))
@@ -102,6 +106,8 @@ const scripts = () => {
     .pipe(rollup({
       input: 'source/js/app.js'
     }, 'umd'))
+    .pipe(rename("scripts.js"))
+    .pipe(gulp.dest("build/js"))
     .pipe(rename("scripts.min.js"))
     .pipe(uglify())
     .pipe(sourcemap.write('.'))

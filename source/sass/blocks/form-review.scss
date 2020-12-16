@@ -301,6 +301,7 @@
   &--radio,
   &--checkbox {
     justify-content: flex-start;
+    height: fit-content;
 
     font-size: 18px;
     line-height: 26px;
@@ -334,19 +335,35 @@
 
       &:nth-of-type(even) {
         padding-left: 31px;
+        padding-right: 65px;
       }
     }
 
     @media (min-width: $desktop-width) {
-      max-width: fit-content;
+      max-width: 320px;
+      width: 100%;
 
       &:nth-of-type(odd),
       &:nth-of-type(even) {
         padding-left: 0;
+        padding-right: 0;
+      }
+
+      &:nth-of-type(4n + 1),
+      &:nth-of-type(4n + 2) {
+        max-width: 258px;
+      }
+
+      &:nth-of-type(4n + 3) {
+        max-width: 238px;
+      }
+
+      &:nth-of-type(4n) {
+        max-width: 205px;
       }
 
       &:not(:nth-of-type(4n)) {
-        padding-right: 71px;
+        padding-right: 10px;
       }
     }
   }
@@ -363,6 +380,7 @@
       display: inline-block;
       width: 56px;
       height: 56px;
+      align-self: flex-start;
       flex-shrink: 0;
       flex-grow: 0;
       background-color: $lightgray;
